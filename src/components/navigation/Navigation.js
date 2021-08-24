@@ -1,9 +1,10 @@
 import React from 'react';
+import faceRec from './faceRecognition.png';
 
 const Navigation = () => {
   return (
-    <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
-      <p>Sign Out</p>
+    <nav>
+      <button>Sign Out</button>
     </nav>
   )
 }

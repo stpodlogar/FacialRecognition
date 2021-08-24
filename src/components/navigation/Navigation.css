@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+nav button {
+    margin: 0;
+    padding: 10px 20px;
+    outline: none;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+nav button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+}
