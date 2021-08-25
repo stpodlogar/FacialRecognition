@@ -4,7 +4,7 @@ import faceRec from './faceRecognition.png';
 const Navigation = () => {
   return (
     <nav>
-      <button>Sign Out</button>
+      <button className='btn'>Sign Out</button>
     </nav>
   )
 }
