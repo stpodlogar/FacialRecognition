@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .particles {
   position: fixed;
   top: 0;

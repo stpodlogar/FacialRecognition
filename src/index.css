@@ -19,14 +19,33 @@ code {
   padding: 10px 20px;
   outline: none;
   background: transparent;
+  font-weight: bold;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary {
+  border: 2px solid #203A43;
+  color: #203A43;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #203A43;
+  border-color: #203A43;
+  color: #fff;
+}
+
+.btn-secondary {
   border: 2px solid #fff;
   color: #fff;
   transition: all 0.2s;
 }
 
-.btn:hover {
-  cursor: pointer;
+.btn-secondary:hover {
   background-color: #fff;
   border-color: #fff;
-  color: #000;
+  color: #203A43;
 }
