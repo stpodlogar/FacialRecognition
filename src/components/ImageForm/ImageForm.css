@@ -1,5 +1,13 @@
-input {
+.image-input {
     padding: 10px;
-    border: 2px solid #fff;
-    margin-right: 5px;
+    padding-left: 15px;
+    border: 2px solid lightgray;
+    width: 50%;
+    background-color: lightgray;
+    border-radius: 0.25em;
+    font-size: 1em;
+}
+
+.image-form {
+    width: 100%;
 }

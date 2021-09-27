@@ -3,15 +3,15 @@ import './ImageForm.css';
 
 const ImageInput = ({ onInputChange, onButtonSubmit }) => {
   return (
-    <>
+    <section className='image-form-container'>
       <p>
         {'This Brain will detect faces in your pictures. Give it a try!'}
       </p>
-      <div>
-        <input type='text' onChange={onInputChange}></input>
-        <button className='btn btn-secondary' onClick={onButtonSubmit}>Detect</button>
+      <div className='image-form'>
+        <input className='image-input' type='text' placeholder='Image URL' onChange={onInputChange}></input>
+        <button className='btn btn-primary' onClick={onButtonSubmit}>Detect</button>
       </div>
-    </>
+    </section>
   )
 }
 

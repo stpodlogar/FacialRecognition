@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.app-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  max-width: 750px;
+  margin: 0 auto 5em;
+}
+
 .center {
   display: flex;
   justify-content: center;
