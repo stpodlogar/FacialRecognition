@@ -1,36 +1,101 @@
 import React from 'react';
 import './Register.css';
 
-const Register = ({ onRouteChange }) => {
-  return (
-    <article className='center'>
-      <div className='signin-container'>
-        <fieldset>
-          <legend>Register</legend>
-          <div className='form-group'>
-            <label htmlFor='email-address'>Name</label>
-            <input type='text' name='name' id='name'></input>
+class Register extends React.Component  {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      name: ''
+    }
+  }
+
+  onNameChange = (event) => {
+    this.setState({name: event.target.value})
+  }
+
+  onEmailChange = (event) => {
+    this.setState({email: event.target.value})
+  }
+
+  onPasswordChange = (event) => {
+    this.setState({password: event.target.value})
+  }
+
+  onSubmitRegister = () => {
+    fetch('http://localhost:3000/register', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+        name: this.state.name
+      })
+    })
+      .then(response => response.json())
+      .then(user => {
+        if (user.id) {
+          this.props.loadUser(user);
+          this.props.onRouteChange('home');
+        }
+      })
+  }
+
+  render() {
+    const { onRouteChange } = this.props;
+    return (
+      <article className='center'>
+        <div className='signin-container'>
+          <fieldset>
+            <legend>Register</legend>
+            <div className='form-group'>
+             
+              <input 
+                type='text' 
+                name='name' 
+                id='name'
+                placeholder='Name'
+                autoComplete='off'
+                onChange = {this.onNameChange}
+              />
+            </div>
+            <div className='form-group'>
+              
+              <input 
+                type='email'
+                name='email-address' 
+                id='email-address'
+                placeholder='Email'
+                onChange = {this.onEmailChange}
+              />
+            </div>
+            <div className='form-group'>              
+              <input 
+                onChange={this.onPasswordChange}
+                type='password' 
+                name='password' 
+                id='password'
+                placeholder='Password'
+              />
+            </div>
+          </fieldset>
+          <div>
+            <input
+              onClick={this.onSubmitRegister}
+              className='btn btn-primary register' 
+              type='submit' 
+              value='Register'>
+            </input>
           </div>
-          <div className='form-group'>
-            <label htmlFor='email-address'>Email</label>
-            <input type='email' name='email-address' id='email-address'></input>
+          <div className='register-cta'>
+            <p>Already have an account?</p>
+            <button onClick={() => onRouteChange('signin')} className='btn link'>Sign in</button>
           </div>
-          <div className='form-group'>
-            <label htmlFor='password'>Password</label>
-            <input type='password' name='password' id='password'></input>
-          </div>
-        </fieldset>
-        <div>
-          <input
-            onClick={() => onRouteChange('home')}
-            className='btn btn-primary' 
-            type='submit' 
-            value='Sign in'>
-          </input>
         </div>
-      </div>
-    </article>
-  )
+      </article>
+    )
+  }
 }
 
 export default Register;

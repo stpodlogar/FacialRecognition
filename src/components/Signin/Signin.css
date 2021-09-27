@@ -1,22 +1,31 @@
 .signin-container {
     background-color: #fff;
     width: 400px;
-    padding: 30px 10px;
-    margin: 0 1rem;
-    border-radius: 10px;
+    padding: 30px 2em;
+    margin: 5em 1em 1em 1em;
+    border-radius: 0.25em;
 }
 
 .form-group {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 30px 10px;
+    margin: 30px 0;
 }
 
 .form-group input {
     margin: 0;
-    border: 2px solid gray;
+    border: 2px solid lightgray;
     outline: none;
+    border-radius: 0.25em;
+    height: 2em;
+    font-size: 1em;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.form-group input:focus {
+    border: 2px solid blue;
 }
 
 .form-group label {
@@ -26,8 +35,35 @@
 
 fieldset {
     border: none;
+    padding: 0;
 }
 
 legend {
     font-size: 3rem;
+}
+
+.link {
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.sign-in, .register {
+    width: 100%;
+    line-height: 2em;
+    font-size: 1em;
+    margin: 0;
+}
+
+.register-cta {
+    margin-top: 1.5em;
+}
+
+.register-cta p {
+    display: inline;
+}
+
+.register-cta .btn {
+    margin: 0;
+    padding: 0.25em;
 }

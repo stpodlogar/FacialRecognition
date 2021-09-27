@@ -28,9 +28,12 @@ class Signin extends React.Component {
       })
     })
       .then(response => response.json())
-      .then(data => {
-        if (data === 'success') {
+      .then(user => {
+        if (user.id) {
+          this.props.loadUser(user);
           this.props.onRouteChange('home');
+        } else {
+          console.log("Invalid User");
         }
       })
   }
@@ -43,34 +46,38 @@ class Signin extends React.Component {
           <fieldset>
             <legend>Sign In</legend>
             <div className='form-group'>
-              <label htmlFor='email-address'>Email</label>
+              
               <input 
                 onChange={this.onEmailChange} 
                 type='email' 
                 name='email-address' 
                 id='email-address'
+                placeholder='Email'
               />
             </div>
             <div className='form-group'>
-              <label htmlFor='password'>Password</label>
+              
               <input 
                 onChange = {this.onPasswordChange}
                 type='password' 
                 name='password' 
                 id='password'
+                placeholder='Password'
               />
             </div>
           </fieldset>
           <div>
-            <input
+            <button
               onClick={this.onSubmitSignIn}
-              className='btn btn-primary' 
+              onSubmit={this.onSubmitSignIn}
+              className='btn btn-primary sign-in' 
               type='submit' 
-              value='Sign in'>
-            </input>
+              >Sign in
+            </button>
           </div>
-          <div>
-            <button onClick={() => onRouteChange('register')} className='btn'>Register</button>
+          <div className='register-cta'>
+            <p>Don't have an account?</p>
+            <button onClick={() => onRouteChange('register')} className='btn link'>Register</button>
           </div>
         </div>
       </article>
