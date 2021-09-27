@@ -1,15 +1,16 @@
 import React from 'react';
+import './Rank.css';
 
-const Rank = () => {
+const Rank = ({name, entries}) => {
   return (
-    <div>
+    <section className='rank-container'>
       <div>
-        {'Stephen, your rank is...'}
+        <p>{`${name}, your current entry count is...`}</p>
       </div>
-      <div>
-        {'#5'}
+      <div className='entries'>
+        {entries}
       </div>
-    </div>
+    </section>
   )
 }
   

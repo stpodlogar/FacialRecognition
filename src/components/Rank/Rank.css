@@ -1,0 +1,35 @@
+.rank-container, .image-container, .image-form-container {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 0.25em;
+    margin: 0 1em 0.5em;
+    padding: 1em;
+}
+
+.image-container {
+    margin: 0 1em;
+    border-radius: 0 0 0.25em 0.25em;
+    min-height: 500px;
+    padding-top: revert;
+}
+
+.inner-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    height: 550px;
+    width: 100%;
+    border-radius: 0.25em;
+}
+
+.image-form-container {
+    margin: 0 1em;
+    border-radius: 0.25em 0.25em 0 0;
+}
+
+.entries {
+    margin-top: 0.25em;
+    font-size: 3em;
+}
