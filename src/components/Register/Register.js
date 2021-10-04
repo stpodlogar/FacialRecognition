@@ -23,7 +23,8 @@ class Register extends React.Component  {
     this.setState({password: event.target.value})
   }
 
-  onSubmitRegister = () => {
+  onSubmitRegister = (event) => {
+    event.preventDefault();
     fetch('http://localhost:3000/register', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -47,26 +48,25 @@ class Register extends React.Component  {
     return (
       <article className='center'>
         <div className='signin-container'>
-          <fieldset>
-            <legend>Register</legend>
-            <div className='form-group'>
-             
+          <legend>Register</legend>
+          <form onSubmit={this.onSubmitRegister}>
+            <div className='form-group'>  
               <input 
                 type='text' 
                 name='name' 
                 id='name'
                 placeholder='Name'
-                autoComplete='off'
+                autoComplete='given-name'
                 onChange = {this.onNameChange}
               />
             </div>
-            <div className='form-group'>
-              
+            <div className='form-group'> 
               <input 
                 type='email'
                 name='email-address' 
                 id='email-address'
                 placeholder='Email'
+                autoComplete='email'
                 onChange = {this.onEmailChange}
               />
             </div>
@@ -77,17 +77,18 @@ class Register extends React.Component  {
                 name='password' 
                 id='password'
                 placeholder='Password'
+                autoComplete='newPassword'
               />
             </div>
-          </fieldset>
-          <div>
-            <input
-              onClick={this.onSubmitRegister}
-              className='btn btn-primary register' 
-              type='submit' 
-              value='Register'>
-            </input>
-          </div>
+            <div>
+              <input
+                onClick={this.onSubmitRegister}
+                className='btn btn-primary register' 
+                type='submit' 
+                value='Register'>
+              </input>
+            </div>
+          </form>
           <div className='register-cta'>
             <p>Already have an account?</p>
             <button onClick={() => onRouteChange('signin')} className='btn link'>Sign in</button>

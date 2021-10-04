@@ -18,7 +18,8 @@ class Signin extends React.Component {
     this.setState({signInPassword: event.target.value})
   }
 
-  onSubmitSignIn = () => {
+  onSubmitSignIn = (event) => {
+    event.preventDefault();
     fetch('http://localhost:3000/signin', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -34,6 +35,7 @@ class Signin extends React.Component {
           this.props.onRouteChange('home');
         } else {
           console.log("Invalid User");
+          document.querySelector('.login-validation').style.display = 'block';
         }
       })
   }
@@ -43,38 +45,38 @@ class Signin extends React.Component {
     return (
       <article className='center'>
         <div className='signin-container'>
-          <fieldset>
-            <legend>Sign In</legend>
+          <legend>Sign In</legend>
+          <form onSubmit={this.onSubmitSignIn}>
+            <p className='login-validation'>Incorrect username or password.</p>
             <div className='form-group'>
-              
               <input 
                 onChange={this.onEmailChange} 
                 type='email' 
                 name='email-address' 
                 id='email-address'
                 placeholder='Email'
+                autoComplete='email'
               />
             </div>
             <div className='form-group'>
-              
               <input 
                 onChange = {this.onPasswordChange}
                 type='password' 
                 name='password' 
                 id='password'
                 placeholder='Password'
+                autoComplete='current-password'
               />
             </div>
-          </fieldset>
-          <div>
-            <button
-              onClick={this.onSubmitSignIn}
-              onSubmit={this.onSubmitSignIn}
-              className='btn btn-primary sign-in' 
-              type='submit' 
-              >Sign in
-            </button>
-          </div>
+            <div>
+              <button
+                onClick={this.onSubmitSignIn}
+                className='btn btn-primary sign-in' 
+                type='submit'
+                >Sign in
+              </button>
+            </div>
+          </form>
           <div className='register-cta'>
             <p>Don't have an account?</p>
             <button onClick={() => onRouteChange('register')} className='btn link'>Register</button>

@@ -67,3 +67,13 @@ legend {
     margin: 0;
     padding: 0.25em;
 }
+
+.login-validation {
+    text-align: left;
+    background: pink;
+    color: maroon;
+    padding: 1em;
+    border-radius: 0.25em;
+    border: solid 1px maroon;
+    display: none;
+}
