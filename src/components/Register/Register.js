@@ -50,7 +50,7 @@ class Register extends React.Component  {
 <<<<<<< HEAD
 <<<<<<< HEAD
           <legend>Register</legend>
-          <form onSubmit={this.onSubmitRegister} noValidate>
+          <form onSubmit={this.onSubmitRegister}>
             <div className='form-group'>  
 =======
 =======

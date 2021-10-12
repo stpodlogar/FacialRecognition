@@ -1,14 +1,12 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import './Signin.css';
 
 class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      signInEmail: 'user@example.com',
-      signInPassword: 'password'
+      signInEmail: '',
+      signInPassword: ''
     }
   }
 
@@ -38,11 +36,15 @@ class Signin extends React.Component {
           console.log("Invalid User");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           document.querySelector('.notification.error').style.display = 'flex';
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
+=======
+          document.querySelector('.login-validation').style.display = 'block';
+>>>>>>> parent of 9f12779 (Info message for signin)
         }
       })
   }
@@ -52,6 +54,7 @@ class Signin extends React.Component {
     return (
       <article className='center'>
         <div className='signin-container'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className='notification info'>
@@ -72,6 +75,11 @@ class Signin extends React.Component {
           <fieldset>
             <legend>Sign In</legend>
 >>>>>>> parent of 46e8615 (Sign-in validation message)
+=======
+          <legend>Sign In</legend>
+          <form onSubmit={this.onSubmitSignIn}>
+            <p className='login-validation'>Incorrect username or password.</p>
+>>>>>>> parent of 9f12779 (Info message for signin)
             <div className='form-group'>
               
               <input 
@@ -83,11 +91,14 @@ class Signin extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
                 autoComplete='email'
+<<<<<<< HEAD
                 value={this.state.signInEmail}
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
+=======
+>>>>>>> parent of 9f12779 (Info message for signin)
               />
             </div>
             <div className='form-group'>
@@ -101,11 +112,14 @@ class Signin extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
                 autoComplete='current-password'
+<<<<<<< HEAD
                 value={this.state.signInPassword}
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
+=======
+>>>>>>> parent of 9f12779 (Info message for signin)
               />
             </div>
           </fieldset>

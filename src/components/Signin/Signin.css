@@ -70,24 +70,15 @@ legend {
 <<<<<<< HEAD
 }
 
-.notification {
+.login-validation {
     text-align: left;
+    background: pink;
+    color: maroon;
     padding: 1em;
     border-radius: 0.25em;
-    margin: 1em auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.notification p {
-    margin: 0 1em;
-}
-
-.error {
-    background: #fde9e4;
-    border: solid 1px #D5390D;
+    border: solid 1px maroon;
     display: none;
+<<<<<<< HEAD
 }
 
 .info {
@@ -97,4 +88,6 @@ legend {
 >>>>>>> parent of 46e8615 (Sign-in validation message)
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
+=======
+>>>>>>> parent of 9f12779 (Info message for signin)
 }
