@@ -37,7 +37,10 @@ class Signin extends React.Component {
         } else {
           console.log("Invalid User");
 <<<<<<< HEAD
+<<<<<<< HEAD
           document.querySelector('.notification.error').style.display = 'flex';
+=======
+>>>>>>> parent of 46e8615 (Sign-in validation message)
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
         }
@@ -49,6 +52,7 @@ class Signin extends React.Component {
     return (
       <article className='center'>
         <div className='signin-container'>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='notification info'>
             <FontAwesomeIcon icon={faInfoCircle} size='2x' color='#173DB9'/>
@@ -64,6 +68,10 @@ class Signin extends React.Component {
           <fieldset>
             <legend>Sign In</legend>
 >>>>>>> parent of 46e8615 (Sign-in validation message)
+=======
+          <fieldset>
+            <legend>Sign In</legend>
+>>>>>>> parent of 46e8615 (Sign-in validation message)
             <div className='form-group'>
               
               <input 
@@ -73,8 +81,11 @@ class Signin extends React.Component {
                 id='email-address'
                 placeholder='Email'
 <<<<<<< HEAD
+<<<<<<< HEAD
                 autoComplete='email'
                 value={this.state.signInEmail}
+=======
+>>>>>>> parent of 46e8615 (Sign-in validation message)
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
               />
@@ -88,8 +99,11 @@ class Signin extends React.Component {
                 id='password'
                 placeholder='Password'
 <<<<<<< HEAD
+<<<<<<< HEAD
                 autoComplete='current-password'
                 value={this.state.signInPassword}
+=======
+>>>>>>> parent of 46e8615 (Sign-in validation message)
 =======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
               />

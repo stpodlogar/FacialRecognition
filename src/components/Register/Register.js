@@ -48,14 +48,20 @@ class Register extends React.Component  {
       <article className='center'>
         <div className='signin-container'>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <legend>Register</legend>
           <form onSubmit={this.onSubmitRegister} noValidate>
             <div className='form-group'>  
 =======
+=======
+>>>>>>> parent of 46e8615 (Sign-in validation message)
           <fieldset>
             <legend>Register</legend>
             <div className='form-group'>
              
+<<<<<<< HEAD
+>>>>>>> parent of 46e8615 (Sign-in validation message)
+=======
 >>>>>>> parent of 46e8615 (Sign-in validation message)
               <input 
                 type='text' 
