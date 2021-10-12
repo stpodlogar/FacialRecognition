@@ -7,23 +7,6 @@
     padding: 1em;
 }
 
-.image-container {
-    margin: 0 1em;
-    border-radius: 0 0 0.25em 0.25em;
-    min-height: 500px;
-    padding-top: revert;
-}
-
-.inner-image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightgray;
-    height: 550px;
-    width: 100%;
-    border-radius: 0.25em;
-}
-
 .image-form-container {
     margin: 0 1em;
     border-radius: 0.25em 0.25em 0 0;

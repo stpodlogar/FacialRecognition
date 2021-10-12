@@ -12,12 +12,61 @@
     cursor: pointer;
 }
 
+.image-container {
+    margin: 0 1em;
+    border-radius: 0 0 0.25em 0.25em;
+    min-height: 500px;
+    padding-top: revert;
+}
+
+.inner-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    height: 550px;
+    width: 100%;
+    border-radius: 0.25em;
+    position: relative;
+}
+
 .image-wrapper {
-    position: absolute;
-    /* margin: 40px; */
+    position: relative;
     max-width: 500px;
 }
 
 .image-wrapper img {
     max-height: 500px;
+}
+
+.image-icon {
+    position: absolute;
+}
+
+#loading {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-image-container:after {
+    content: " ";
+    z-index: 10;
+    display: none;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
