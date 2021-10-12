@@ -1,12 +1,14 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import './Signin.css';
 
 class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      signInEmail: '',
-      signInPassword: ''
+      signInEmail: 'user@example.com',
+      signInPassword: 'password'
     }
   }
 
@@ -35,7 +37,7 @@ class Signin extends React.Component {
           this.props.onRouteChange('home');
         } else {
           console.log("Invalid User");
-          document.querySelector('.login-validation').style.display = 'block';
+          document.querySelector('.notification.error').style.display = 'flex';
         }
       })
   }
@@ -45,9 +47,16 @@ class Signin extends React.Component {
     return (
       <article className='center'>
         <div className='signin-container'>
+          <div className='notification info'>
+            <FontAwesomeIcon icon={faInfoCircle} size='2x' color='#173DB9'/>
+            <p>For convenience, an example account is pre-loaded.</p>
+          </div>
           <legend>Sign In</legend>
-          <form onSubmit={this.onSubmitSignIn}>
-            <p className='login-validation'>Incorrect username or password.</p>
+          <form onSubmit={this.onSubmitSignIn} noValidate>
+            <div className='notification error'>
+              <FontAwesomeIcon icon={faExclamationTriangle} size='2x' color='#D5390D'/>
+              <p className='login-validation'>Incorrect username or password.</p>
+            </div>
             <div className='form-group'>
               <input 
                 onChange={this.onEmailChange} 
@@ -56,6 +65,7 @@ class Signin extends React.Component {
                 id='email-address'
                 placeholder='Email'
                 autoComplete='email'
+                value={this.state.signInEmail}
               />
             </div>
             <div className='form-group'>
@@ -66,6 +76,7 @@ class Signin extends React.Component {
                 id='password'
                 placeholder='Password'
                 autoComplete='current-password'
+                value={this.state.signInPassword}
               />
             </div>
             <div>

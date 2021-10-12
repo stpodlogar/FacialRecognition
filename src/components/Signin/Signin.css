@@ -68,12 +68,27 @@ legend {
     padding: 0.25em;
 }
 
-.login-validation {
+.notification {
     text-align: left;
-    background: pink;
-    color: maroon;
     padding: 1em;
     border-radius: 0.25em;
-    border: solid 1px maroon;
+    margin: 1em auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.notification p {
+    margin: 0 1em;
+}
+
+.error {
+    background: #fde9e4;
+    border: solid 1px #D5390D;
     display: none;
+}
+
+.info {
+    background-color: #d0e8f5;
+    border: solid 1px #173DB9;
 }
