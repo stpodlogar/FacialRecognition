@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   onButtonSubmit = () => {
-    this.setState({imageUrl: this.state.input})
+    this.setState({imageUrl: this.state.input, isLoading: true})
       fetch('http://localhost:3000/imageurl', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
@@ -91,8 +91,12 @@ class App extends Component {
             .catch(console.log)
         }
         this.displayFaceBox(this.calculateFaceLocation(response))
+        this.setState({isLoading: false});
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        this.setState({isLoading: false});
+        console.log(err)
+      });
   }
 
   onRouteChange = (route) => {
@@ -106,7 +110,7 @@ class App extends Component {
   }
 
   render() {
-    const { isSignedIn, imageUrl, route, box } = this.state;
+    const { isSignedIn, isLoading, imageUrl, route, box } = this.state;
     return (
       <div className="App">
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
@@ -114,7 +118,7 @@ class App extends Component {
         ? <div className='app-container'>
             <Rank name={this.state.user.name} entries={this.state.user.entries}/>
             <ImageForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
-            <FaceRecognition box={box} imageUrl={imageUrl}/>
+            <FaceRecognition box={box} imageUrl={imageUrl} isLoading={isLoading}/>
           </div>
         : (
           route === 'signin' 
