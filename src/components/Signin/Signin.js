@@ -68,7 +68,7 @@ class Signin extends React.Component {
                 value={this.state.signInEmail}
               />
             </div>
-            <div className='form-group'> 
+            <div className='form-group'>
               <input 
                 onChange = {this.onPasswordChange}
                 type='password' 
@@ -79,15 +79,15 @@ class Signin extends React.Component {
                 value={this.state.signInPassword}
               />
             </div>
+            <div>
+              <button
+                onClick={this.onSubmitSignIn}
+                className='btn btn-primary sign-in' 
+                type='submit'
+                >Sign in
+              </button>
+            </div>
           </form>
-          <div>
-            <button
-              onClick={this.onSubmitSignIn}
-              className='btn btn-primary sign-in' 
-              type='submit' 
-              >Sign in
-            </button>
-          </div>
           <div className='register-cta'>
             <p>Don't have an account?</p>
             <button onClick={() => onRouteChange('register')} className='btn link'>Register</button>
