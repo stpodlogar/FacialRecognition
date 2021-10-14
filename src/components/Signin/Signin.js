@@ -7,8 +7,8 @@ class Signin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      signInEmail: '',
-      signInPassword: ''
+      signInEmail: 'user@example.com',
+      signInPassword: 'password'
     }
   }
 
@@ -20,7 +20,8 @@ class Signin extends React.Component {
     this.setState({signInPassword: event.target.value})
   }
 
-  onSubmitSignIn = () => {
+  onSubmitSignIn = (event) => {
+    event.preventDefault();
     fetch('http://localhost:3000/signin', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -37,7 +38,6 @@ class Signin extends React.Component {
         } else {
           console.log("Invalid User");
           document.querySelector('.notification.error').style.display = 'flex';
-          document.querySelector('.login-validation').style.display = 'block';
         }
       })
   }
@@ -83,7 +83,6 @@ class Signin extends React.Component {
           <div>
             <button
               onClick={this.onSubmitSignIn}
-              onSubmit={this.onSubmitSignIn}
               className='btn btn-primary sign-in' 
               type='submit' 
               >Sign in
