@@ -48,25 +48,38 @@ class Register extends React.Component  {
     return (
       <article className='center'>
         <div className='signin-container'>
+<<<<<<< HEAD
+<<<<<<< HEAD
           <legend>Register</legend>
-          <form onSubmit={this.onSubmitRegister} noValidate>
+          <form onSubmit={this.onSubmitRegister}>
             <div className='form-group'>  
+=======
+=======
+>>>>>>> parent of 46e8615 (Sign-in validation message)
+          <fieldset>
+            <legend>Register</legend>
+            <div className='form-group'>
+             
+<<<<<<< HEAD
+>>>>>>> parent of 46e8615 (Sign-in validation message)
+=======
+>>>>>>> parent of 46e8615 (Sign-in validation message)
               <input 
                 type='text' 
                 name='name' 
                 id='name'
                 placeholder='Name'
-                autoComplete='given-name'
+                autoComplete='off'
                 onChange = {this.onNameChange}
               />
             </div>
-            <div className='form-group'> 
+            <div className='form-group'>
+              
               <input 
                 type='email'
                 name='email-address' 
                 id='email-address'
                 placeholder='Email'
-                autoComplete='email'
                 onChange = {this.onEmailChange}
               />
             </div>
@@ -77,18 +90,17 @@ class Register extends React.Component  {
                 name='password' 
                 id='password'
                 placeholder='Password'
-                autoComplete='newPassword'
               />
             </div>
-            <div>
-              <input
-                onClick={this.onSubmitRegister}
-                className='btn btn-primary register' 
-                type='submit' 
-                value='Register'>
-              </input>
-            </div>
-          </form>
+          </fieldset>
+          <div>
+            <input
+              onClick={this.onSubmitRegister}
+              className='btn btn-primary register' 
+              type='submit' 
+              value='Register'>
+            </input>
+          </div>
           <div className='register-cta'>
             <p>Already have an account?</p>
             <button onClick={() => onRouteChange('signin')} className='btn link'>Sign in</button>

@@ -66,6 +66,7 @@ legend {
 .register-cta .btn {
     margin: 0;
     padding: 0.25em;
+<<<<<<< HEAD
 }
 
 .notification {
@@ -91,4 +92,6 @@ legend {
 .info {
     background-color: #d0e8f5;
     border: solid 1px #173DB9;
+=======
+>>>>>>> 4a5e287ec608bf05b451dd53f1e93a8e47d9bb37
 }
