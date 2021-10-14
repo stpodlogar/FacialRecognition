@@ -12,6 +12,20 @@
     cursor: pointer;
 }
 
+.rank-container, .image-container, .image-form-container {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 0.25em;
+    margin: 0 1em 0.5em;
+    padding: 1em;
+}
+
+.image-form-container {
+    margin: 0 1em;
+    border-radius: 0.25em 0.25em 0 0;
+}
+
 .image-container {
     margin: 0 1em;
     border-radius: 0 0 0.25em 0.25em;
