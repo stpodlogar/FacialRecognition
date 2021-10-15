@@ -38,7 +38,7 @@ fieldset {
     padding: 0;
 }
 
-legend {
+.signin-container > h2 {
     font-size: 3rem;
 }
 

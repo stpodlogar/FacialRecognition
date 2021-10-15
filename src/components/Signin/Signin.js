@@ -51,7 +51,7 @@ class Signin extends React.Component {
             <FontAwesomeIcon icon={faInfoCircle} size='2x' color='#173DB9'/>
             <p>For convenience, an example account is pre-loaded.</p>
           </div>
-          <legend>Sign In</legend>
+          <h2>Sign In</h2>
           <form onSubmit={this.onSubmitSignIn} noValidate>
             <div className='notification error'>
               <FontAwesomeIcon icon={faExclamationTriangle} size='2x' color='#D5390D'/>

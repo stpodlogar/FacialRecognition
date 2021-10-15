@@ -48,7 +48,7 @@ class Register extends React.Component  {
     return (
       <article className='center'>
         <div className='signin-container'>
-          <legend>Register</legend>
+          <h2>Register</h2>
           <form onSubmit={this.onSubmitRegister} noValidate>
             <div className='form-group'>  
               <input 
